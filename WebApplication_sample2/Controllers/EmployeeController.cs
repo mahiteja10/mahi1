@@ -48,6 +48,7 @@ namespace WebApplication_sample2.Controllers
                 emplo.Name = e.Name;
                 emplo.Salary = e.Salary;
                 emplo.Age = e.Age;
+                emplo.Sex = e.Sex;
                 emp.Entry(emplo).State = System.Data.Entity.EntityState.Modified;
                 emp.SaveChanges();
                 return emp.Employees.Where(es => es.ID == id).FirstOrDefault();
